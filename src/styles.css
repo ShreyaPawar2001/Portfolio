@@ -1,0 +1,441 @@
+/* Default light mode styles */
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode-toggle {
+  cursor: pointer;
+  padding-right:  40px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.dark-mode-toggle:hover {
+  color: #0056b3;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode .dark-mode-toggle {
+  color: #f1c40f;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  color: #d4ac0d;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center the text below the image */
+}
+
+.image-container {
+  padding-top: 200px;
+  position: relative;
+  width: 40vw; /* Relative to viewport width */
+  height: 40vw; /* Square aspect ratio */
+  max-width: 150px; /* Max width to prevent it from becoming too large */
+  max-height: 150px; /* Adjusted to match max-width */
+  /* z-index: 0.1; */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1; 
+}
+
+.hero-sect {
+  /* margin-top: 20px; Add some space between the heart image and text */
+  text-align: center; /* Center the text below the image */
+}
+
+.hero-sect h1, .hero-sect p {
+  margin: 0;
+  padding: 0;
+}
+
+.heart {
+  position: absolute;
+  width: 2vw; /* Relative to viewport width */
+  height: 2vw; /* Relative to viewport width */
+  background-color: red;
+  clip-path: polygon(
+    50% 0%,
+    63% 38%,
+    100% 38%,
+    79% 59%,
+    94% 77%,
+    50% 100%,
+    6% 77%,
+    21% 59%,
+    0% 38%,
+    37% 38%
+  ); /* Heart shape */
+  animation: pop 40s ease-out forwards; /* Slower pop effect */
+  top: 70%;
+  left: 50%;
+  transform-origin: center;
+  opacity: 0.7;
+  /* z-index: 0.9;  */
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5) translate(0, 0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1; /* Start becoming visible */
+    transform: scale(0.8) translate(var(--x), var(--y));
+  }
+  70% {
+    opacity: 1; /* Fully visible */
+    transform: scale(1.2) translate(var(--x), var(--y)) rotate(360deg);
+  }
+  100% {
+    transform: scale(1.5) translate(var(--x), var(--y)) rotate(720deg); /* Slow pop out */
+    opacity: 0;
+  }
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 600px) {
+  .image-container {
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .heart {
+    width: 4vw;
+    height: 4vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .image-container {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .heart {
+    width: 1vw;
+    height: 1vw;
+  }
+}
+
+
+
+/* Add margin to the body or first section to push content below the header */
+
+
+
+/* Left-aligned 'Home' */
+.left {
+  font-size: 1.2rem;
+  color: #6c6b6b;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.left:hover {
+  color: #000;
+}
+
+/* Right-aligned links */
+.right {
+  display: flex;
+  gap: 70px;
+}
+
+.right a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #6c6b6b;
+}
+
+.right a:hover, .left:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .right {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+
+footer{
+  /* display: flex; */
+  /* justify-content: space-between; */
+  align-items: center;
+  width: 100%;
+  /* max-width: 1200px; Constrain width on large screens */
+  margin: 0 auto;
+  background-color: #d3d0d078;
+    position: fixed; /* Keep header at the top */
+    bottom: 0;
+    left: 0;
+    height: 45px;
+}
+footer div{
+  padding-top: 5px;
+}
+.intro1 button{
+  background-color: #9f9f9f;
+  border-radius: 15px;
+  
+  padding: 10px;
+  
+
+}
+.intro1 button a{
+  color: #000;
+  text-decoration: none;
+}
+.project{
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+}
+
+
+
+.header {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+
+  position: fixed; /* Keep header at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Add a background color to the header */
+  z-index: 2; /* Ensure the header is on top of other elements */
+  padding: 20px; /* Add some padding to the header */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow to the header */
+}
+
+.content-container {
+  margin-top: 60px; /* Add a margin to the top of the content container */
+}
+
+
+/* bar fills skills */
+
+.hero-sect h1 {
+  padding-top: 100px;
+ 
+  font-size: 60px;
+  color: rgb(110, 111, 111);
+
+ 
+}
+.hero-sect p{
+  font-size: 30px;
+  color: rgb(110, 111, 111);
+}
+@media (max-width: 600px) {
+  .hero-sect h1{
+      font-size: 30px;
+  }
+  .hero-sect p{
+      font-size: 12px;
+  }
+
+}
+@media (max-width: 600px){
+  .intro1{
+      text-align: center;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+.intro1{
+  /* padding-right: 200px; */
+}
+
+.bar {
+  position: relative; /* Ensure the container of the fill bar is positioned relative for absolute children */
+  width: 100%; /* Full width for the bar container */
+  height: 40px; /* Adjust height as needed */
+  background-color: #f0f0f0; /* Background color for the bar container */
+  margin-top: 20px; /* Add some space above the bar */
+  margin-bottom: 10px; /* Add some space below each bar */
+  border-radius: 5px; /* Optional: rounded corners for the bar */
+  overflow: hidden; /* Ensure the fill doesn't overflow the bar container */
+}
+
+.bar .fill {
+  position: absolute; /* Position fill within the bar */
+  top: 0;
+  left: 0;
+  height: 100%; /* Full height of the bar */
+  background-color: #00a1a7; /* Color of the fill */
+  opacity: 1;
+  transition: width 0.3s ease; /* Smooth transition for width changes */
+}
+
+.tag {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Align tag to the left with some padding */
+  transform: translateY(-50%); /* Center the text vertically */
+  background-color: #04c2c9;
+  color: #fff;
+  padding: 5px 10px; /* Padding around the text */
+  border-radius: 3px; /* Optional: rounded corners for the tag */
+  font-family: "Raleway-bold";
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* project  */
+
+.box-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.box-cont {
+  flex: 1 1 calc(33.333% - 20px); /* Three columns layout */
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.box {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box h2 a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .box-cont {
+    flex: 1 1 calc(50% - 20px); /* Two columns on tablets */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .box-cont {
+    flex: 1 1 100%; /* Single column on mobile */}
+   
+  }
+
+  @media (max-width: 370px) {
+    .box-cont {
+      flex: 1 1 100%; /* Single column on mobile */}
+     
+    }
+
+
+    /* about */
+
+    .about-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      /* padding: 20px; */
+     
+    }
+  
+    .description {
+      color: #4a4a4a;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+  
+    .section-title {
+      color: #00a1a7;
+      margin-top: 20px;
+      font-size: 1.8rem;
+    }
+  
+    .skills-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+  
+    .skills-list li {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+  
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .description {
+        font-size: 1rem;
+        text-align: center;
+      }
+      .about-section{
+        background-color: none
+      }
+  
+      .section-title {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+  
+      .skills-list li {
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .about-section {
+        /* padding: 15px; */
+      }
+  
+      .description {
+        font-size: 0.9rem;
+        text-align: justify;
+      }
+  
+      .section-title {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+  
+      .skills-list li {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+    }
+

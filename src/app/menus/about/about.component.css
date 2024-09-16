@@ -1,0 +1,117 @@
+.about-section {
+    padding-top: 100px;
+    text-align: left;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    background-color: #2224291c; /* Dark blue background */
+    color: #4a4a4a; /* White text */
+    /* margin: 80px; */
+  }
+  
+  .about-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+   
+  }
+  
+  .about-section p {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  
+  .about-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .about-section li {
+    margin-bottom: 10px;
+  }
+  
+  .about-section li:before {
+    content: "✦"; /* Use a checkmark symbol */
+    margin-right: 10px;
+    color: #8bc34a; /* Green color */
+  }
+  
+  .about-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .about-section a {
+    text-decoration: none;
+    color: #8bc34a; /* Green color */
+  }
+  
+  .about-section a:hover {
+    color: #fff; /* White color on hover */
+  }
+  
+  /* Responsive design for various widths */
+  
+  /* Large screens (1200px and up) */
+  @media (min-width: 1200px) {
+    .about-section {
+      padding: 70px;
+    }
+    .about-section h1 {
+      font-size: 48px;
+    }
+    .about-section p {
+      font-size: 18px;
+    }
+  }
+  
+  /* Medium screens (992px to 1199px) */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .about-section {
+      padding: 50px;
+    }
+    .about-section h1 {
+      font-size: 36px;
+    }
+    .about-section p {
+      font-size: 16px;
+    }
+  }
+  
+  /* Small screens (768px to 991px) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .about-section {
+      padding: 30px;
+    }
+    .about-section h1 {
+      font-size: 24px;
+    }
+    .about-section p {
+      font-size: 14px;
+    }
+  }
+  
+  /* Extra small screens (480px to 767px) */
+  @media (min-width: 480px) and (max-width: 767px) {
+    .about-section {
+      padding: 20px;
+    }
+    .about-section h1 {
+      font-size: 18px;
+    }
+    .about-section p {
+      font-size: 12px;
+    }
+  }
+  
+  /* Mobile screens (below 480px) */
+  @media (max-width: 479px) {
+    .about-section {
+      padding: 10px;
+    }
+    .about-section h1 {
+      font-size: 14px;
+    }
+    .about-section p {
+      font-size: 10px;
+    }
+  }
