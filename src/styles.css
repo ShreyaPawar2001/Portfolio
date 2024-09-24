@@ -269,6 +269,7 @@ footer div{
 @media (max-width: 600px){
   .intro1{
       text-align: center;
+      padding: none;
   }
 }
 
@@ -279,7 +280,9 @@ footer div{
   
 }
 .intro1{
-  /* padding-right: 200px; */
+ 
+  margin-right: 42px; 
+  
 }
 
 .bar {
@@ -416,6 +419,7 @@ footer div{
         font-size: 1rem;
         text-align: center;
       }
+    
     }
   
     @media (max-width: 480px) {
